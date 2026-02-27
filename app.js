@@ -20,7 +20,7 @@ addUserBtn.addEventListener("click", async (e) => {
   e.preventDefault();
   try {
     const response = await fetch(
-      "http://my-json-server-production-8dd7.up.railway.app/users",
+      "https://my-json-server-production-8dd7.up.railway.app/users",
       {
         method: "POST",
         body: JSON.stringify({
@@ -48,7 +48,7 @@ addUserBtn.addEventListener("click", async (e) => {
 async function deleteUser(id) {
   try {
     const response = await fetch(
-      `http://my-json-server-production-8dd7.up.railway.app/users/${id}`,
+      `https://my-json-server-production-8dd7.up.railway.app/users/${id}`,
       {
         method: "DELETE",
       }
@@ -67,7 +67,7 @@ async function deleteUser(id) {
 async function getUsers() {
   try {
     const response = await fetch(
-      "http://my-json-server-production-8dd7.up.railway.app/users"
+      "https://my-json-server-production-8dd7.up.railway.app/users"
     );
     const users = await response.json();
     usersContainer.textContent = "";
@@ -122,7 +122,7 @@ usersContainer.addEventListener("click", async (e) => {
 
     try {
       const response = await fetch(
-        `http://my-json-server-production-8dd7.up.railway.app/users/${idEdit}`
+        `https://my-json-server-production-8dd7.up.railway.app/users/${idEdit}`
       );
       const user = await response.json();
 
@@ -140,7 +140,7 @@ editUserBtn.addEventListener("click", async (e) => {
 
   try {
     const response = await fetch(
-      `http://my-json-server-production-8dd7.up.railway.app/users/${idEdit}`,
+      `https://my-json-server-production-8dd7.up.railway.app/users/${idEdit}`,
       {
         method: "PUT",
         body: JSON.stringify({
