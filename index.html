@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./fontawesome/font-awesome.min.css" />
+  </head>
+  <body>
+    <form class="form-add">
+      <input id="firstName" type="text" placeholder="firstName" /> <br />
+      <input id="lastName" type="text" placeholder="lastName" /> <br />
+      <input id="age" type="number" placeholder="age" /> <br />
+      <button id="addUser">add user</button>
+    </form>
+
+    <!-- --------------Edit-User------------------- -->
+
+    <form class="form-edit hidden">
+      <input id="firstNameEdit" type="text" placeholder="firstName" /> <br />
+      <input id="lastNameEdit" type="text" placeholder="lastName" /> <br />
+      <input id="ageEdit" type="number" placeholder="age" /> <br />
+      <button id="editUser">edit user</button>
+    </form>
+
+    <div class="usersContainer"></div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

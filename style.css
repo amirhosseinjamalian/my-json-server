@@ -1,0 +1,173 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("./Poppins-Medium.ttf") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0;
+  font-family: "Poppins", sans-serif;
+}
+
+button {
+  user-select: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+button:active {
+  transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+  -moz-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  -o-transform: scale(0.95);
+}
+
+form {
+  border: 1px solid rgb(213, 213, 213);
+  background-color: #f6f6f6;
+  width: 250px;
+  text-align: center;
+  padding: 30px 20px;
+  margin: 5px 0 30px;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  box-shadow: 2px 4px 16px 3px rgba(0, 0, 0, 0.14),
+    -3px -2px 15px 1px rgba(0, 0, 0, 0.28);
+}
+
+.hidden {
+  display: none;
+}
+
+input {
+  width: 100%;
+  border: 1px solid gray;
+  padding: 5px 8px;
+  margin-bottom: 13px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+}
+
+#addUser,
+#editUser {
+  padding: 4px 13px;
+  font-size: 15px;
+  border: none;
+  color: #fff;
+  margin: 10px 0 0;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+#addUser {
+  background-color: rgb(223 66 118);
+}
+
+#editUser {
+  background-color: #1059b1;
+}
+
+.usersContainer {
+  padding: 20px 10px;
+  width: 350px;
+}
+.usersCard {
+  width: 250px;
+  margin: 0 auto 20px;
+  padding: 20px 15px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  overflow: hidden;
+}
+
+.usersCard > p {
+  margin-bottom: 8px;
+}
+
+/* .usersCardBtns{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row-reverse;
+  } */
+
+.usersCardBtns {
+  position: relative;
+}
+
+.usersCardBtns > li {
+  position: absolute;
+  left: 4px;
+  top: 6px;
+  font-size: 19px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+
+.usersCardBtns > li:hover {
+  color: #1059b1;
+}
+
+.usersCard:hover .usersCardBtns li {
+  opacity: 1;
+  visibility: visible;
+}
+
+.deleteUserBtn {
+  padding: 4px 10px;
+  border: none;
+  background-color: rgb(204 69 69);
+  color: #fff;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  display: block;
+  margin: 10px auto 5px;
+}
+
+/* ---responsive---- */
+
+@media screen and (max-width: 768px) {
+  .usersCardBtns > li {
+    display: block;
+  }
+}
